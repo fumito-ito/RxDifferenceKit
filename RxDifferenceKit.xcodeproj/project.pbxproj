@@ -10,6 +10,7 @@
 		0AC07133215DCF6600A13090 /* RxDifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC07129215DCF6500A13090 /* RxDifferenceKit.framework */; };
 		0AC07138215DCF6600A13090 /* RxDifferenceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC07137215DCF6600A13090 /* RxDifferenceKitTests.swift */; };
 		0AC0713A215DCF6600A13090 /* RxDifferenceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC0712C215DCF6500A13090 /* RxDifferenceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C54DEF6E2164F44500D0DE68 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DEF6D2164F44500D0DE68 /* TableViewDataSource.swift */; };
 		C5E45D7B215DDA6300AF7DF8 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */; };
 		C5E45D7E215DDA7900AF7DF8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */; };
 		C5E45D7F215DDA7900AF7DF8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */; };
@@ -32,6 +33,7 @@
 		0AC07132215DCF6600A13090 /* RxDifferenceKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxDifferenceKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC07137215DCF6600A13090 /* RxDifferenceKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDifferenceKitTests.swift; sourceTree = "<group>"; };
 		0AC07139215DCF6600A13090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C54DEF6D2164F44500D0DE68 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/iOS/DifferenceKit.framework; sourceTree = "<group>"; };
 		C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		0AC0712B215DCF6500A13090 /* RxDifferenceKit */ = {
 			isa = PBXGroup;
 			children = (
+				C54DEF702164FEBC00D0DE68 /* ReactiveExtensions */,
+				C54DEF6F2164FEB000D0DE68 /* DataSources */,
 				0AC0712C215DCF6500A13090 /* RxDifferenceKit.h */,
 				0AC0712D215DCF6500A13090 /* Info.plist */,
 			);
@@ -94,6 +98,21 @@
 				0AC07139215DCF6600A13090 /* Info.plist */,
 			);
 			path = RxDifferenceKitTests;
+			sourceTree = "<group>";
+		};
+		C54DEF6F2164FEB000D0DE68 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				C54DEF6D2164F44500D0DE68 /* TableViewDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		C54DEF702164FEBC00D0DE68 /* ReactiveExtensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReactiveExtensions;
 			sourceTree = "<group>";
 		};
 		C5E45D79215DDA6300AF7DF8 /* Frameworks */ = {
@@ -171,6 +190,7 @@
 				TargetAttributes = {
 					0AC07128215DCF6500A13090 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					0AC07131215DCF6600A13090 = {
 						CreatedOnToolsVersion = 10.0;
@@ -279,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54DEF6E2164F44500D0DE68 /* TableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +447,7 @@
 		0AC0713E215DCF6600A13090 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -447,6 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.fumito-ito.RxDifferenceKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,6 +478,7 @@
 		0AC0713F215DCF6600A13090 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -484,6 +508,7 @@
 		0AC07141215DCF6600A13090 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K489QY5CFD;
 				INFOPLIST_FILE = RxDifferenceKitTests/Info.plist;
@@ -502,6 +527,7 @@
 		0AC07142215DCF6600A13090 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K489QY5CFD;
 				INFOPLIST_FILE = RxDifferenceKitTests/Info.plist;
