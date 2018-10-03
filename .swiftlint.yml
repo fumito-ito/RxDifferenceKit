@@ -1,0 +1,28 @@
+disabled_rules:
+  - class_delegate_protocol
+  - weak_delegate
+  - force_cast
+  - force_try
+  - type_name
+  - missing_docs
+  - nesting
+  - function_body_length
+  - identifier_name
+  - cyclomatic_complexity
+  - file_length
+  - line_length
+  - large_tuple
+  - todo
+  - type_body_length
+included:
+  - RxDifferenceKit
+  - RxDifferenceKitTests
+excluded:
+  - Carthage
+line_length: 220
+type_body_length:
+  - 400 # warning
+  - 500 # error
+force_cast:
+  severity: warning
+force_try: warning

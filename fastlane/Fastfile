@@ -13,11 +13,41 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+SWIFTLINT_PKG_URL = "https://github.com/realm/SwiftLint/releases/download/0.26.0/SwiftLint.pkg"
+CARTHAGE_PKG_URL = "https://github.com/Carthage/Carthage/releases/download/0.30.1/Carthage.pkg"
+
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  desc "Install remote pkg."
+  private_lane :install_remote_pkg do |options|
+    pkgname = "#{ENV["TMPDIR"]}_.pkg"
+    sh <<-EOS
+      curl -o #{pkgname} -L #{options[:pkg_url]} && \
+      sudo installer -pkg #{pkgname} -target / && \
+      rm #{pkgname}
+    EOS
+  end
+
+  desc "Install dependencies"
+  lane :install_dependencies do
+    # install SwiftLint
+    install_remote_pkg(pkg_url: SWIFTLINT_PKG_URL)
+
+    # install Carthage
+    install_remote_pkg(pkg_url: CARTHAGE_PKG_URL)
+
+    # run Carthage
+    carthage(
+      command: "bootstrap",
+      use_binaries: false,
+      cache_builds: true,
+      platform: "iOS"
+    )
+  end
+
+  desc "Run tests"
+  lane :test do
+    run_tests(scheme: "RxDifferenceKit")
   end
 end
