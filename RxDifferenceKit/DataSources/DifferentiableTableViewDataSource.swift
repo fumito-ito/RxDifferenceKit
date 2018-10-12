@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 import RxCocoa
+import RxSwift
 import DifferenceKit
 
-open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITableViewDataSource {
-
+open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITableViewDataSource, RxTableViewDataSourceType {
+    public typealias Element = [S]
     public typealias ConfigureCell = (DifferentiableTableViewDataSource<S>, UITableView, IndexPath, S) -> UITableViewCell
     public typealias TitleForHeaderInSection = (DifferentiableTableViewDataSource<S>, Int) -> String?
     public typealias TitleForFooterInSection = (DifferentiableTableViewDataSource<S>, Int) -> String?
@@ -22,6 +23,8 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
     public typealias SectionIndexTitles = (DifferentiableTableViewDataSource<S>) -> [String]?
     public typealias SectionForSectionIndexTitle = (DifferentiableTableViewDataSource<S>, _ title: String, _ index: Int) -> Int
 
+    public let configuration: DifferentiableDataSourceConfiguration<S>
+
     public init(
         configureCell: @escaping ConfigureCell,
         titleForHeaderInSection: @escaping  TitleForHeaderInSection = { _, _ in nil },
@@ -29,7 +32,8 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
         canEditRowAtIndexPath: @escaping CanEditRowAtIndexPath = { _, _ in false },
         canMoveRowAtIndexPath: @escaping CanMoveRowAtIndexPath = { _, _ in false },
         sectionIndexTitles: @escaping SectionIndexTitles = { _ in nil },
-        sectionForSectionIndexTitle: @escaping SectionForSectionIndexTitle = { _, _, index in index }
+        sectionForSectionIndexTitle: @escaping SectionForSectionIndexTitle = { _, _, index in index },
+        configuration: DifferentiableDataSourceConfiguration<S> = DifferentiableDataSourceConfiguration.default
         ) {
         self.configureCell = configureCell
         self.titleForHeaderInSection = titleForHeaderInSection
@@ -38,18 +42,18 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
         self.canMoveRowAtIndexPath = canMoveRowAtIndexPath
         self.sectionIndexTitles = sectionIndexTitles
         self.sectionForSectionIndexTitle = sectionForSectionIndexTitle
+        self.configuration = configuration
     }
 
     #if DEBUG
     // If data source has already been bound, then mutating it
     // afterwards isn't something desired.
     // This simulates immutability after binding
-    var _dataSourceBound: Bool = false
+    private var dataSourceBound: Bool = false
 
     private func ensureNotMutatedAfterBinding() {
-        assert(!_dataSourceBound, "Data source is already bound. Please write this line before binding call (`bindTo`, `drive`). Data source must first be completely configured, and then bound after that, otherwise there could be runtime bugs, glitches, or partial malfunctions.")
+        assert(!self.dataSourceBound, "Data source is already bound. Please write this line before binding call (`bindTo`, `drive`). Data source must first be completely configured, and then bound after that, otherwise there could be runtime bugs, glitches, or partial malfunctions.")
     }
-
     #endif
 
     private var _items: [S] = []
@@ -164,5 +168,44 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
 
     open func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return sectionForSectionIndexTitle(self, title, index)
+    }
+
+    public func tableView(_ tableView: UITableView, observedEvent: RxSwift.Event<Element>) {
+        Binder(self) { dataSource, newItems in
+            #if DEBUG
+            self.dataSourceBound = true
+            #endif
+
+            guard dataSource.items.count > 0 else {
+                dataSource.setItems(newItems)
+                tableView.reloadData()
+                return
+            }
+
+            let changeset = self.generateChangeset(source: dataSource.items,
+                                                   target: newItems,
+                                                   with: self.configuration.duplicationPolicy)
+
+            tableView.reload(using: changeset,
+                             deleteSectionsAnimation: self.configuration.rowAnimation.deleteSectionAnimation,
+                             insertSectionsAnimation: self.configuration.rowAnimation.insertSectionAnimation,
+                             reloadSectionsAnimation: self.configuration.rowAnimation.reloadSectionAnimation,
+                             deleteRowsAnimation: self.configuration.rowAnimation.deleteRowAnimation,
+                             insertRowsAnimation: self.configuration.rowAnimation.insertRowAnimation,
+                             reloadRowsAnimation: self.configuration.rowAnimation.reloadRowAnimation,
+                             setData: { data in
+                                dataSource.setItems(data)
+            })
+        }.on(observedEvent)
+    }
+
+    private func generateChangeset(source: Element, target: Element, with policy: DuplicationPolicy<S>) -> StagedChangeset<Element> {
+        switch policy {
+        case .duplicatable:
+            return StagedChangeset(source: source, target: target)
+        case let .unique(handler):
+            let unique = handler(target)
+            return StagedChangeset(source: source, target: unique)
+        }
     }
 }
