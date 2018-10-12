@@ -1,5 +1,5 @@
 //
-//  TableViewDataSource.swift
+//  DifferentiableSectionedTableViewDataSource.swift
 //  RxDifferenceKit
 //
 //  Created by svpcadmin on 2018/10/03.
@@ -11,16 +11,16 @@ import UIKit
 import RxCocoa
 import DifferenceKit
 
-open class TableViewDataSource<S: Differentiable> : NSObject, UITableViewDataSource {
+open class DifferentiableSectionedTableViewDataSource<S: DifferentiableSection> : NSObject, UITableViewDataSource where S.Collection.Index == Int {
 
-    public typealias ConfigureCell = (TableViewDataSource<S>, UITableView, IndexPath, S) -> UITableViewCell
-    public typealias TitleForHeaderInSection = (TableViewDataSource<S>, Int) -> String?
-    public typealias TitleForFooterInSection = (TableViewDataSource<S>, Int) -> String?
-    public typealias CanEditRowAtIndexPath = (TableViewDataSource<S>, IndexPath) -> Bool
-    public typealias CanMoveRowAtIndexPath = (TableViewDataSource<S>, IndexPath) -> Bool
+    public typealias ConfigureCell = (DifferentiableSectionedTableViewDataSource<S>, UITableView, IndexPath, S.Collection.Element) -> UITableViewCell
+    public typealias TitleForHeaderInSection = (DifferentiableSectionedTableViewDataSource<S>, Int) -> String?
+    public typealias TitleForFooterInSection = (DifferentiableSectionedTableViewDataSource<S>, Int) -> String?
+    public typealias CanEditRowAtIndexPath = (DifferentiableSectionedTableViewDataSource<S>, IndexPath) -> Bool
+    public typealias CanMoveRowAtIndexPath = (DifferentiableSectionedTableViewDataSource<S>, IndexPath) -> Bool
 
-    public typealias SectionIndexTitles = (TableViewDataSource<S>) -> [String]?
-    public typealias SectionForSectionIndexTitle = (TableViewDataSource<S>, _ title: String, _ index: Int) -> Int
+    public typealias SectionIndexTitles = (DifferentiableSectionedTableViewDataSource<S>) -> [String]?
+    public typealias SectionForSectionIndexTitle = (DifferentiableSectionedTableViewDataSource<S>, _ title: String, _ index: Int) -> Int
 
     public init(
         configureCell: @escaping ConfigureCell,
@@ -126,15 +126,15 @@ open class TableViewDataSource<S: Differentiable> : NSObject, UITableViewDataSou
     }
 
     open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard section == 0 else { return 0 }
+        precondition(section < self._items.count)
 
-        return self._items.count
+        return self._items[section].elements.count
     }
 
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        precondition(indexPath.section == 0 && indexPath.item < self._items.count)
+        precondition(indexPath.section < self._items.count && indexPath.item < self._items[indexPath.section].elements.count)
 
-        return configureCell(self, tableView, indexPath, self[indexPath.row])
+        return configureCell(self, tableView, indexPath, self._items[indexPath.section].elements[indexPath.row])
     }
 
     open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -154,8 +154,17 @@ open class TableViewDataSource<S: Differentiable> : NSObject, UITableViewDataSou
     }
 
     open func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let sourceItem = self._items.remove(at: sourceIndexPath.row)
-        self._items.insert(sourceItem, at: destinationIndexPath.row)
+        let source = self._items[sourceIndexPath.section]
+        var sourceCollection = source.elements
+        let target = sourceCollection.remove(at: sourceIndexPath.row)
+
+        self._items[sourceIndexPath.section] = S(source: source, elements: sourceCollection)
+
+        let destination = self._items[destinationIndexPath.section]
+        var destinationCollection = destination.elements
+        destinationCollection.insert(at: destinationIndexPath.row, with: target)
+
+        self._items[destinationIndexPath.section] = S(source: destination, elements: destinationCollection)
     }
 
     open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
