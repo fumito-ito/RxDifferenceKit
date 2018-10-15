@@ -11,5 +11,14 @@ import DifferenceKit
 
 public enum DuplicationPolicy<T: Differentiable> {
     case duplicatable
-    case unique(handler: ([T]) -> [T])
+    case unique(handler: UniqueHandler)
+
+    public typealias UniqueHandler = ([T]) -> [T]
+
+    public static var uniqueByOrderedSet: UniqueHandler {
+        return { original in
+            let set = NSOrderedSet(array: original)
+            return set.array as! [T]
+        }
+    }
 }
