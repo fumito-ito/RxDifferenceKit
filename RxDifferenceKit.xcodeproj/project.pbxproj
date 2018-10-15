@@ -16,6 +16,7 @@
 		C5E2A0BC21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BB21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift */; };
 		C5E2A0BE2170898B008570B1 /* RowAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BD2170898B008570B1 /* RowAnimation.swift */; };
 		C5E2A0C0217089A5008570B1 /* DuplicationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BF217089A5008570B1 /* DuplicationPolicy.swift */; };
+		C5E2A0C22171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0C12171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift */; };
 		C5E45D7B215DDA6300AF7DF8 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */; };
 		C5E45D7E215DDA7900AF7DF8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */; };
 		C5E45D7F215DDA7900AF7DF8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */; };
@@ -44,6 +45,7 @@
 		C5E2A0BB21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableDataSourceConfiguration.swift; sourceTree = "<group>"; };
 		C5E2A0BD2170898B008570B1 /* RowAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowAnimation.swift; sourceTree = "<group>"; };
 		C5E2A0BF217089A5008570B1 /* DuplicationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationPolicy.swift; sourceTree = "<group>"; };
+		C5E2A0C12171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/iOS/DifferenceKit.framework; sourceTree = "<group>"; };
 		C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				C54DEF6D2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift */,
 				C54DEF712164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift */,
+				C5E2A0C12171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E2A0C22171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift in Sources */,
 				C54DEF6E2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift in Sources */,
 				C5E2A0BC21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift in Sources */,
 				C54DEF722164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift in Sources */,
