@@ -46,6 +46,18 @@ platform :ios do
     )
   end
 
+  desc "Build App"
+  lane :build do |options|
+    configuration = options[:configuration] || "Release"
+    scheme = options[:scheme] || "RxDifferenceKit"
+
+    xcodebuild(
+      scheme: scheme,
+      configuration: configuration,
+      project: "RxDifferenceKit.xcodeproj"
+    )
+  end
+
   desc "Run tests"
   lane :test do
     run_tests(scheme: "RxDifferenceKit")
