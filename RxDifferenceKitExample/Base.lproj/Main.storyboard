@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CT2-wK-jfu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxDifferenceKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zbq-Nc-Ntp"/>
+                    <connections>
+                        <segue destination="7OR-Pm-CoF" kind="show" identifier="linerTable" id="VrF-Kf-EnU"/>
+                        <segue destination="sga-57-g5j" kind="show" identifier="sectionedTable" id="iWV-tY-2TN"/>
+                        <segue destination="idj-Hl-5lF" kind="show" identifier="linerCollection" id="o9K-PD-llc"/>
+                        <segue destination="5tk-UT-tEz" kind="show" identifier="sectionedCollection" id="xgb-rP-Qgh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="126"/>
+        </scene>
+        <!--Liner Table View Controller-->
+        <scene sceneID="7hd-Ok-4g3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0x-Ne-Guv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="7OR-Pm-CoF" customClass="LinerTableViewController" customModule="RxDifferenceKitExample" customModuleProvider="target" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="-662"/>
+        </scene>
+        <!--Liner Collection View Controller-->
+        <scene sceneID="AvO-lS-8U3">
+            <objects>
+                <viewController id="idj-Hl-5lF" customClass="LinerCollectionViewController" customModule="RxDifferenceKitExample" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJC-n5-ak0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="960"/>
+        </scene>
+        <!--Sectioned Collection View Controller-->
+        <scene sceneID="8jd-xT-ZfN">
+            <objects>
+                <viewController id="5tk-UT-tEz" customClass="SectionedCollectionViewController" customModule="RxDifferenceKitExample" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73h-6A-7yO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="960"/>
+        </scene>
+        <!--Sectioned Table View Controller-->
+        <scene sceneID="kG7-u5-0FK">
+            <objects>
+                <viewController id="sga-57-g5j" customClass="SectionedTableViewController" customModule="RxDifferenceKitExample" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Orx-2W-Mu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="-662"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X5s-We-i5v">
+            <objects>
+                <navigationController id="CT2-wK-jfu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xme-2z-LaD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cwG-MT-1XO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mzn-zX-dsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="127"/>
+        </scene>
+    </scenes>
+</document>

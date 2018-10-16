@@ -29,12 +29,31 @@
 		0AC0713A215DCF6600A13090 /* RxDifferenceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC0712C215DCF6500A13090 /* RxDifferenceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C54DEF6E2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DEF6D2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift */; };
 		C54DEF722164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DEF712164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift */; };
+		C5A8E6F32174ADFD004534DC /* LinerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6F22174ADFD004534DC /* LinerTableViewController.swift */; };
+		C5A8E6F52174AE08004534DC /* SectionedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6F42174AE08004534DC /* SectionedTableViewController.swift */; };
+		C5A8E6F72174AE12004534DC /* LinerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6F62174AE12004534DC /* LinerCollectionViewController.swift */; };
+		C5A8E6F92174AE23004534DC /* SectionedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6F82174AE23004534DC /* SectionedCollectionViewController.swift */; };
+		C5A8E6FB2174AE3C004534DC /* LinerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6FA2174AE3C004534DC /* LinerViewModel.swift */; };
+		C5A8E6FD2174AE46004534DC /* SectionedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6FC2174AE46004534DC /* SectionedViewModel.swift */; };
+		C5A8E7002174AE74004534DC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6FF2174AE74004534DC /* TableViewCell.swift */; };
+		C5A8E7022174AE84004534DC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E7012174AE84004534DC /* CollectionViewCell.swift */; };
+		C5A8E7042174B01C004534DC /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E7032174B01C004534DC /* MenuViewModel.swift */; };
+		C5A8E7072174B24E004534DC /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E7062174B24E004534DC /* Menu.swift */; };
 		C5E2A0B921705F88008570B1 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0B821705F88008570B1 /* Collection+Extensions.swift */; };
 		C5E2A0BC21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BB21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift */; };
 		C5E2A0BE2170898B008570B1 /* RowAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BD2170898B008570B1 /* RowAnimation.swift */; };
 		C5E2A0C0217089A5008570B1 /* DuplicationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BF217089A5008570B1 /* DuplicationPolicy.swift */; };
 		C5E2A0C22171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0C12171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift */; };
 		C5E2A0C4217411F4008570B1 /* DifferentiableSectionedCollecitonViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0C3217411F4008570B1 /* DifferentiableSectionedCollecitonViewDataSource.swift */; };
+		C5E2A0CC21742165008570B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0CB21742165008570B1 /* AppDelegate.swift */; };
+		C5E2A0CE21742165008570B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0CD21742165008570B1 /* ViewController.swift */; };
+		C5E2A0D121742165008570B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E2A0CF21742165008570B1 /* Main.storyboard */; };
+		C5E2A0D321742166008570B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E2A0D221742166008570B1 /* Assets.xcassets */; };
+		C5E2A0D621742166008570B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E2A0D421742166008570B1 /* LaunchScreen.storyboard */; };
+		C5E2A0DB21742184008570B1 /* RxDifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC07129215DCF6500A13090 /* RxDifferenceKit.framework */; };
+		C5E2A0DC2174219F008570B1 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */; };
+		C5E2A0DD2174219F008570B1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */; };
+		C5E2A0DE2174219F008570B1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */; };
 		C5E45D7B215DDA6300AF7DF8 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */; };
 		C5E45D7E215DDA7900AF7DF8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */; };
 		C5E45D7F215DDA7900AF7DF8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */; };
@@ -65,12 +84,29 @@
 		0AC07139215DCF6600A13090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54DEF6D2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableTableViewDataSource.swift; sourceTree = "<group>"; };
 		C54DEF712164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableSectionedTableViewDataSource.swift; sourceTree = "<group>"; };
+		C5A8E6F22174ADFD004534DC /* LinerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinerTableViewController.swift; sourceTree = "<group>"; };
+		C5A8E6F42174AE08004534DC /* SectionedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedTableViewController.swift; sourceTree = "<group>"; };
+		C5A8E6F62174AE12004534DC /* LinerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinerCollectionViewController.swift; sourceTree = "<group>"; };
+		C5A8E6F82174AE23004534DC /* SectionedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedCollectionViewController.swift; sourceTree = "<group>"; };
+		C5A8E6FA2174AE3C004534DC /* LinerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinerViewModel.swift; sourceTree = "<group>"; };
+		C5A8E6FC2174AE46004534DC /* SectionedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedViewModel.swift; sourceTree = "<group>"; };
+		C5A8E6FF2174AE74004534DC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C5A8E7012174AE84004534DC /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C5A8E7032174B01C004534DC /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		C5A8E7062174B24E004534DC /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C5E2A0B821705F88008570B1 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		C5E2A0BB21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableDataSourceConfiguration.swift; sourceTree = "<group>"; };
 		C5E2A0BD2170898B008570B1 /* RowAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowAnimation.swift; sourceTree = "<group>"; };
 		C5E2A0BF217089A5008570B1 /* DuplicationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicationPolicy.swift; sourceTree = "<group>"; };
 		C5E2A0C12171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		C5E2A0C3217411F4008570B1 /* DifferentiableSectionedCollecitonViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableSectionedCollecitonViewDataSource.swift; sourceTree = "<group>"; };
+		C5E2A0C921742164008570B1 /* RxDifferenceKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDifferenceKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5E2A0CB21742165008570B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5E2A0CD21742165008570B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5E2A0D021742165008570B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5E2A0D221742166008570B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5E2A0D521742166008570B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C5E2A0D721742166008570B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/iOS/DifferenceKit.framework; sourceTree = "<group>"; };
 		C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -95,6 +131,17 @@
 				0AC07133215DCF6600A13090 /* RxDifferenceKit.framework in Frameworks */,
 				0A510BD52176CB8300B9F2F6 /* DifferenceKit.framework in Frameworks */,
 				0A510BD42176CB8300B9F2F6 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5E2A0C621742164008570B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E2A0DC2174219F008570B1 /* DifferenceKit.framework in Frameworks */,
+				C5E2A0DD2174219F008570B1 /* RxCocoa.framework in Frameworks */,
+				C5E2A0DE2174219F008570B1 /* RxSwift.framework in Frameworks */,
+				C5E2A0DB21742184008570B1 /* RxDifferenceKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +180,7 @@
 			children = (
 				0AC0712B215DCF6500A13090 /* RxDifferenceKit */,
 				0AC07136215DCF6600A13090 /* RxDifferenceKitTests */,
+				C5E2A0CA21742164008570B1 /* RxDifferenceKitExample */,
 				0AC0712A215DCF6500A13090 /* Products */,
 				C5E45D79215DDA6300AF7DF8 /* Frameworks */,
 			);
@@ -143,6 +191,7 @@
 			children = (
 				0AC07129215DCF6500A13090 /* RxDifferenceKit.framework */,
 				0AC07132215DCF6600A13090 /* RxDifferenceKitTests.xctest */,
+				C5E2A0C921742164008570B1 /* RxDifferenceKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +239,51 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C5A8E6EF2174AD8F004534DC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5A8E6F22174ADFD004534DC /* LinerTableViewController.swift */,
+				C5A8E6F42174AE08004534DC /* SectionedTableViewController.swift */,
+				C5A8E6F62174AE12004534DC /* LinerCollectionViewController.swift */,
+				C5A8E6F82174AE23004534DC /* SectionedCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C5A8E6F02174AD97004534DC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C5A8E6FA2174AE3C004534DC /* LinerViewModel.swift */,
+				C5A8E6FC2174AE46004534DC /* SectionedViewModel.swift */,
+				C5A8E7032174B01C004534DC /* MenuViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C5A8E6F12174AD9F004534DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5A8E6FE2174AE5C004534DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5A8E6FF2174AE74004534DC /* TableViewCell.swift */,
+				C5A8E7012174AE84004534DC /* CollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C5A8E7052174B241004534DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5A8E7062174B24E004534DC /* Menu.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C5E2A0B721705F7A008570B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +300,24 @@
 				C5E2A0BF217089A5008570B1 /* DuplicationPolicy.swift */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		C5E2A0CA21742164008570B1 /* RxDifferenceKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				C5A8E7052174B241004534DC /* Models */,
+				C5A8E6F12174AD9F004534DC /* Extensions */,
+				C5A8E6FE2174AE5C004534DC /* Views */,
+				C5A8E6F02174AD97004534DC /* ViewModels */,
+				C5A8E6EF2174AD8F004534DC /* ViewControllers */,
+				C5E2A0CB21742165008570B1 /* AppDelegate.swift */,
+				C5E2A0CD21742165008570B1 /* ViewController.swift */,
+				C5E2A0CF21742165008570B1 /* Main.storyboard */,
+				C5E2A0D221742166008570B1 /* Assets.xcassets */,
+				C5E2A0D421742166008570B1 /* LaunchScreen.storyboard */,
+				C5E2A0D721742166008570B1 /* Info.plist */,
+			);
+			path = RxDifferenceKitExample;
 			sourceTree = "<group>";
 		};
 		C5E45D79215DDA6300AF7DF8 /* Frameworks */ = {
@@ -271,6 +383,24 @@
 			productReference = 0AC07132215DCF6600A13090 /* RxDifferenceKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C5E2A0C821742164008570B1 /* RxDifferenceKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5E2A0DA21742166008570B1 /* Build configuration list for PBXNativeTarget "RxDifferenceKitExample" */;
+			buildPhases = (
+				C5E2A0C521742164008570B1 /* Sources */,
+				C5E2A0C621742164008570B1 /* Frameworks */,
+				C5E2A0C721742164008570B1 /* Resources */,
+				C5E2A0DF217421B0008570B1 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxDifferenceKitExample;
+			productName = RxDifferenceKitExample;
+			productReference = C5E2A0C921742164008570B1 /* RxDifferenceKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -288,6 +418,9 @@
 					0AC07131215DCF6600A13090 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					C5E2A0C821742164008570B1 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = 0AC07123215DCF6500A13090 /* Build configuration list for PBXProject "RxDifferenceKit" */;
@@ -296,6 +429,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0AC0711F215DCF6500A13090;
 			productRefGroup = 0AC0712A215DCF6500A13090 /* Products */;
@@ -304,6 +438,7 @@
 			targets = (
 				0AC07128215DCF6500A13090 /* RxDifferenceKit */,
 				0AC07131215DCF6600A13090 /* RxDifferenceKitTests */,
+				C5E2A0C821742164008570B1 /* RxDifferenceKitExample */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +455,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5E2A0C721742164008570B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E2A0D621742166008570B1 /* LaunchScreen.storyboard in Resources */,
+				C5E2A0D321742166008570B1 /* Assets.xcassets in Resources */,
+				C5E2A0D121742165008570B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +533,27 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		C5E2A0DF217421B0008570B1 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/DifferenceKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -428,6 +594,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5E2A0C521742164008570B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A8E7022174AE84004534DC /* CollectionViewCell.swift in Sources */,
+				C5E2A0CE21742165008570B1 /* ViewController.swift in Sources */,
+				C5E2A0CC21742165008570B1 /* AppDelegate.swift in Sources */,
+				C5A8E6F52174AE08004534DC /* SectionedTableViewController.swift in Sources */,
+				C5A8E7002174AE74004534DC /* TableViewCell.swift in Sources */,
+				C5A8E7042174B01C004534DC /* MenuViewModel.swift in Sources */,
+				C5A8E7072174B24E004534DC /* Menu.swift in Sources */,
+				C5A8E6FB2174AE3C004534DC /* LinerViewModel.swift in Sources */,
+				C5A8E6F92174AE23004534DC /* SectionedCollectionViewController.swift in Sources */,
+				C5A8E6FD2174AE46004534DC /* SectionedViewModel.swift in Sources */,
+				C5A8E6F72174AE12004534DC /* LinerCollectionViewController.swift in Sources */,
+				C5A8E6F32174ADFD004534DC /* LinerTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -437,6 +622,25 @@
 			targetProxy = 0AC07134215DCF6600A13090 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5E2A0CF21742165008570B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5E2A0D021742165008570B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C5E2A0D421742166008570B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5E2A0D521742166008570B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0AC0713B215DCF6600A13090 /* Debug */ = {
@@ -668,6 +872,50 @@
 			};
 			name = Release;
 		};
+		C5E2A0D821742166008570B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K489QY5CFD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RxDifferenceKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.fumitoito.RxDifferenceKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5E2A0D921742166008570B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K489QY5CFD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RxDifferenceKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.fumitoito.RxDifferenceKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -694,6 +942,15 @@
 			buildConfigurations = (
 				0AC07141215DCF6600A13090 /* Debug */,
 				0AC07142215DCF6600A13090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5E2A0DA21742166008570B1 /* Build configuration list for PBXNativeTarget "RxDifferenceKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5E2A0D821742166008570B1 /* Debug */,
+				C5E2A0D921742166008570B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
