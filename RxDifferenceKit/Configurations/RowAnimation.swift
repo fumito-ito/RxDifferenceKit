@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// Animation configurations for UITableView row updates
 public struct RowAnimation {

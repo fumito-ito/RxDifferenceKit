@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A26465921770C7500C3D624 /* DifferentiableDataSourceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BB21706E05008570B1 /* DifferentiableDataSourceConfiguration.swift */; };
+		0A26465A21770C7E00C3D624 /* RowAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BD2170898B008570B1 /* RowAnimation.swift */; };
+		0A26465B21770C7E00C3D624 /* DuplicationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0BF217089A5008570B1 /* DuplicationPolicy.swift */; };
+		0A26465C21770D3E00C3D624 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0B821705F88008570B1 /* Collection+Extensions.swift */; };
+		0A510BC32176C59500B9F2F6 /* DifferentiableTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A510BC22176C59500B9F2F6 /* DifferentiableTableViewDataSourceTests.swift */; };
+		0A510BC52176C5A500B9F2F6 /* DifferentiableSectionedTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A510BC42176C5A500B9F2F6 /* DifferentiableSectionedTableViewDataSourceTests.swift */; };
+		0A510BC72176C5B200B9F2F6 /* DifferentiableCollectionViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A510BC62176C5B200B9F2F6 /* DifferentiableCollectionViewDataSourceTests.swift */; };
+		0A510BC92176C5C200B9F2F6 /* DifferentiableSectionedCollecitonViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A510BC82176C5C200B9F2F6 /* DifferentiableSectionedCollecitonViewDataSourceTests.swift */; };
+		0A510BCA2176C64B00B9F2F6 /* DifferentiableTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DEF6D2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift */; };
+		0A510BCB2176C64B00B9F2F6 /* DifferentiableSectionedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DEF712164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift */; };
+		0A510BCC2176C64B00B9F2F6 /* DifferentiableCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0C12171B80C008570B1 /* DifferentiableCollectionViewDataSource.swift */; };
+		0A510BCD2176C64B00B9F2F6 /* DifferentiableSectionedCollecitonViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E2A0C3217411F4008570B1 /* DifferentiableSectionedCollecitonViewDataSource.swift */; };
+		0A510BD02176CB0700B9F2F6 /* Liner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A510BCF2176CB0700B9F2F6 /* Liner.swift */; };
+		0A510BD22176CB1400B9F2F6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A510BD12176CB1400B9F2F6 /* Section.swift */; };
+		0A510BD32176CB8300B9F2F6 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7C215DDA7900AF7DF8 /* RxCocoa.framework */; };
+		0A510BD42176CB8300B9F2F6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7D215DDA7900AF7DF8 /* RxSwift.framework */; };
+		0A510BD52176CB8300B9F2F6 /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E45D7A215DDA6300AF7DF8 /* DifferenceKit.framework */; };
 		0AC07133215DCF6600A13090 /* RxDifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC07129215DCF6500A13090 /* RxDifferenceKit.framework */; };
 		0AC07138215DCF6600A13090 /* RxDifferenceKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC07137215DCF6600A13090 /* RxDifferenceKitTests.swift */; };
 		0AC0713A215DCF6600A13090 /* RxDifferenceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC0712C215DCF6500A13090 /* RxDifferenceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A510BC22176C59500B9F2F6 /* DifferentiableTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableTableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		0A510BC42176C5A500B9F2F6 /* DifferentiableSectionedTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableSectionedTableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		0A510BC62176C5B200B9F2F6 /* DifferentiableCollectionViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableCollectionViewDataSourceTests.swift; sourceTree = "<group>"; };
+		0A510BC82176C5C200B9F2F6 /* DifferentiableSectionedCollecitonViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableSectionedCollecitonViewDataSourceTests.swift; sourceTree = "<group>"; };
+		0A510BCF2176CB0700B9F2F6 /* Liner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liner.swift; sourceTree = "<group>"; };
+		0A510BD12176CB1400B9F2F6 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		0AC07129215DCF6500A13090 /* RxDifferenceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDifferenceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC0712C215DCF6500A13090 /* RxDifferenceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxDifferenceKit.h; sourceTree = "<group>"; };
 		0AC0712D215DCF6500A13090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,13 +91,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A510BD32176CB8300B9F2F6 /* RxCocoa.framework in Frameworks */,
 				0AC07133215DCF6600A13090 /* RxDifferenceKit.framework in Frameworks */,
+				0A510BD52176CB8300B9F2F6 /* DifferenceKit.framework in Frameworks */,
+				0A510BD42176CB8300B9F2F6 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A510BC02176C53200B9F2F6 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0A510BC62176C5B200B9F2F6 /* DifferentiableCollectionViewDataSourceTests.swift */,
+				0A510BC82176C5C200B9F2F6 /* DifferentiableSectionedCollecitonViewDataSourceTests.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		0A510BC12176C53C00B9F2F6 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				0A510BC22176C59500B9F2F6 /* DifferentiableTableViewDataSourceTests.swift */,
+				0A510BC42176C5A500B9F2F6 /* DifferentiableSectionedTableViewDataSourceTests.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		0A510BCE2176CAEF00B9F2F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A510BCF2176CB0700B9F2F6 /* Liner.swift */,
+				0A510BD12176CB1400B9F2F6 /* Section.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0AC0711F215DCF6500A13090 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +161,9 @@
 		0AC07136215DCF6600A13090 /* RxDifferenceKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A510BCE2176CAEF00B9F2F6 /* Model */,
+				0A510BC12176C53C00B9F2F6 /* TableView */,
+				0A510BC02176C53200B9F2F6 /* CollectionView */,
 				0AC07137215DCF6600A13090 /* RxDifferenceKitTests.swift */,
 				0AC07139215DCF6600A13090 /* Info.plist */,
 			);
@@ -301,6 +357,9 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DifferenceKit.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -351,7 +410,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A510BD02176CB0700B9F2F6 /* Liner.swift in Sources */,
+				0A510BCD2176C64B00B9F2F6 /* DifferentiableSectionedCollecitonViewDataSource.swift in Sources */,
+				0A26465B21770C7E00C3D624 /* DuplicationPolicy.swift in Sources */,
+				0A510BC32176C59500B9F2F6 /* DifferentiableTableViewDataSourceTests.swift in Sources */,
+				0A510BC72176C5B200B9F2F6 /* DifferentiableCollectionViewDataSourceTests.swift in Sources */,
+				0A510BD22176CB1400B9F2F6 /* Section.swift in Sources */,
+				0A26465921770C7500C3D624 /* DifferentiableDataSourceConfiguration.swift in Sources */,
+				0A510BCA2176C64B00B9F2F6 /* DifferentiableTableViewDataSource.swift in Sources */,
+				0A510BCB2176C64B00B9F2F6 /* DifferentiableSectionedTableViewDataSource.swift in Sources */,
+				0A510BC92176C5C200B9F2F6 /* DifferentiableSectionedCollecitonViewDataSourceTests.swift in Sources */,
+				0A510BCC2176C64B00B9F2F6 /* DifferentiableCollectionViewDataSource.swift in Sources */,
 				0AC07138215DCF6600A13090 /* RxDifferenceKitTests.swift in Sources */,
+				0A26465A21770C7E00C3D624 /* RowAnimation.swift in Sources */,
+				0A510BC52176C5A500B9F2F6 /* DifferentiableSectionedTableViewDataSourceTests.swift in Sources */,
+				0A26465C21770D3E00C3D624 /* Collection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +628,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K489QY5CFD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxDifferenceKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,6 +651,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K489QY5CFD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxDifferenceKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
