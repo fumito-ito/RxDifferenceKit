@@ -12,24 +12,34 @@ import RxCocoa
 import RxSwift
 import DifferenceKit
 
+/// Reactive UICollectionViewDatasource with `DifferentiableSection`s
 open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSection> : NSObject, UICollectionViewDataSource, RxCollectionViewDataSourceType where S.Collection.Index == Int {
 
     public typealias Element = [S]
+
     public typealias ConfigureCell = (DifferentiableSectionedCollecitonViewDataSource<S>, UICollectionView, IndexPath, S.Collection.Element) -> UICollectionViewCell
     public typealias ViewForSupplementaryElementOfKind = (DifferentiableSectionedCollecitonViewDataSource<S>, UICollectionView, String, IndexPath) -> UICollectionReusableView
-
     public typealias CanMoveRowAtIndexPath = (DifferentiableSectionedCollecitonViewDataSource<S>, IndexPath) -> Bool
-
     public typealias IndexTitles = (DifferentiableSectionedCollecitonViewDataSource<S>) -> [String]?
     public typealias IndexPathForIndexTitle = (DifferentiableSectionedCollecitonViewDataSource<S>, _ title: String, _ index: Int) -> IndexPath
 
+    /// configuration for data source
     public let configuration: DifferentiableDataSourceConfiguration<S>
 
+    /// Initializer for UICollectionViewDataSource with `DifferentiableSection`
+    ///
+    /// - Parameters:
+    ///   - configureCell: handler for `collectionView(_:cellForItemAt:)`
+    ///   - viewForSupplementaryElementOfKind: handler for `collectionView(_:viewForSupplementaryElementOfKind:at:)`, default value is `nil`
+    ///   - canMoveRowAtIndexPath: handler for `collectionView(_:canMoveItemAt:)`, default value is `{ _, _ in false }`
+    ///   - indexTitles: handler for `indexTitles(for:)`, default value is `{ _ in nil }`
+    ///   - indexPathForIndexTitle: handler for `collectionView(_:indexPathForIndexTitle:at:)`, default value is `nil`
+    ///   - configuration: configuration for data source, default value is `DifferentiableDataSourceConfiguration.default`
     public init(
         configureCell: @escaping ConfigureCell,
         viewForSupplementaryElementOfKind: ViewForSupplementaryElementOfKind? = nil,
-        canMoveRowAtIndexPath: CanMoveRowAtIndexPath? = nil,
-        indexTitles: IndexTitles? = nil,
+        canMoveRowAtIndexPath: @escaping CanMoveRowAtIndexPath = { _, _ in false},
+        indexTitles: @escaping IndexTitles = { _ in nil },
         indexPathForIndexTitle: IndexPathForIndexTitle? = nil,
         configuration: DifferentiableDataSourceConfiguration<S> = DifferentiableDataSourceConfiguration.default
         ) {
@@ -55,6 +65,7 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
 
     private var _items: [S] = []
 
+    /// current items for data source
     open var items: [S] {
         return self._items
     }
@@ -63,10 +74,17 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
         return self._items[index]
     }
 
+    /// update items for data source
+    ///
+    /// This method just update *data source*, do not update collectionView.
+    /// If you need to update tableView, run `collectionView.reloadData()` or etc.
+    ///
+    /// - Parameter items: new items for data source
     open func setItems(_ items: [S]) {
         self._items = items
     }
 
+    /// handler for `collectionView(_:cellForItemAt:)`
     open var configureCell: ConfigureCell {
         didSet {
             #if DEBUG
@@ -75,6 +93,7 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
         }
     }
 
+    /// handler for `collectionView(_:viewForSupplementaryElementOfKind:at:)`
     open var viewForSupplementaryElementOfKind: ViewForSupplementaryElementOfKind? {
         didSet {
             #if DEBUG
@@ -83,7 +102,8 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
         }
     }
 
-    open var canMoveRowAtIndexPath: CanMoveRowAtIndexPath? {
+    /// handler for `collectionView(_:canMoveItemAt:)`
+    open var canMoveRowAtIndexPath: CanMoveRowAtIndexPath {
         didSet {
             #if DEBUG
             ensureNotMutatedAfterBinding()
@@ -91,13 +111,16 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
         }
     }
 
-    open var indexTitles: IndexTitles? {
+    /// handler for `indexTitles(for:)`
+    open var indexTitles: IndexTitles {
         didSet {
             #if DEBUG
             ensureNotMutatedAfterBinding()
             #endif
         }
     }
+
+    /// handler for `collectionView(_:indexPathForIndexTitle:at:)`
     open var indexPathForIndexTitle: IndexPathForIndexTitle? {
         didSet {
             #if DEBUG
@@ -129,7 +152,7 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
     }
 
     open func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        return self.canMoveRowAtIndexPath?(self, indexPath) ?? false
+        return self.canMoveRowAtIndexPath(self, indexPath)
     }
 
     open func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
@@ -147,7 +170,7 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
     }
 
     open func indexTitles(for collectionView: UICollectionView) -> [String]? {
-        return self.indexTitles?(self)
+        return self.indexTitles(self)
     }
 
     public func collectionView(_ collectionView: UICollectionView, observedEvent: Event<[S]>) {

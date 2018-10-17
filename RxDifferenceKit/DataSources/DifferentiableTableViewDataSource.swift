@@ -12,19 +12,33 @@ import RxCocoa
 import RxSwift
 import DifferenceKit
 
+/// Reactive UITableViewDatasource with `Differentiable`s
 open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITableViewDataSource, RxTableViewDataSourceType {
+
     public typealias Element = [S]
+
     public typealias ConfigureCell = (DifferentiableTableViewDataSource<S>, UITableView, IndexPath, S) -> UITableViewCell
     public typealias TitleForHeaderInSection = (DifferentiableTableViewDataSource<S>, Int) -> String?
     public typealias TitleForFooterInSection = (DifferentiableTableViewDataSource<S>, Int) -> String?
     public typealias CanEditRowAtIndexPath = (DifferentiableTableViewDataSource<S>, IndexPath) -> Bool
     public typealias CanMoveRowAtIndexPath = (DifferentiableTableViewDataSource<S>, IndexPath) -> Bool
-
     public typealias SectionIndexTitles = (DifferentiableTableViewDataSource<S>) -> [String]?
     public typealias SectionForSectionIndexTitle = (DifferentiableTableViewDataSource<S>, _ title: String, _ index: Int) -> Int
 
+    /// configuration for data source
     public let configuration: DifferentiableDataSourceConfiguration<S>
 
+    /// Initializer for UITableViewDataSource
+    ///
+    /// - Parameters:
+    ///   - configureCell: handler for `tableView(_:cellForRowAt:)`
+    ///   - titleForHeaderInSection: handler for `tableView(_:titleForHeaderInSection:)`, default value is `{ _, _ in nil }`
+    ///   - titleForFooterInSection: handler for `tableView(_:titleForFooterInSection:)`, default value is `{ _, _ in nil }`
+    ///   - canEditRowAtIndexPath: handler for `tableView(_:canEditRowAt:)`, default value is `{ _, _ in false }`
+    ///   - canMoveRowAtIndexPath: handler for `tableView(_:canMoveRowAt:)`, default value is `{ _, _ in false }`
+    ///   - sectionIndexTitles: handler for `sectionIndexTitles(for:)`, default value is `{ _ in nil }`
+    ///   - sectionForSectionIndexTitle: handler for `tableView(_:sectionForSectionIndexTitle:at:)`, default value is `{ _, _, index in index }`
+    ///   - configuration: configuration for data source, default value is `DifferentiableDataSourceConfiguration.default`
     public init(
         configureCell: @escaping ConfigureCell,
         titleForHeaderInSection: @escaping  TitleForHeaderInSection = { _, _ in nil },
@@ -34,7 +48,7 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
         sectionIndexTitles: @escaping SectionIndexTitles = { _ in nil },
         sectionForSectionIndexTitle: @escaping SectionForSectionIndexTitle = { _, _, index in index },
         configuration: DifferentiableDataSourceConfiguration<S> = DifferentiableDataSourceConfiguration.default
-        ) {
+    ) {
         self.configureCell = configureCell
         self.titleForHeaderInSection = titleForHeaderInSection
         self.titleForFooterInSection = titleForFooterInSection
@@ -58,6 +72,7 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
 
     private var _items: [S] = []
 
+    /// current items for data source
     open var items: [S] {
         return self._items
     }
@@ -66,10 +81,17 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
         return self._items[index]
     }
 
+    /// update items for data source
+    ///
+    /// This method just update *data source*, do not update tableView.
+    /// If you need to update tableView, run `tableView.reloadData()` or etc.
+    ///
+    /// - Parameter items: new items for data source
     open func setItems(_ items: [S]) {
         self._items = items
     }
 
+    /// handler for `tableView(_:cellForRowAt:)`
     open var configureCell: ConfigureCell {
         didSet {
             #if DEBUG
@@ -78,6 +100,7 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
         }
     }
 
+    /// handler for `tableView(_:titleForHeaderInSection:)`
     open var titleForHeaderInSection: TitleForHeaderInSection {
         didSet {
             #if DEBUG
@@ -85,6 +108,8 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
             #endif
         }
     }
+
+    /// handler for `tableView(_:titleForFooterInSection:)`
     open var titleForFooterInSection: TitleForFooterInSection {
         didSet {
             #if DEBUG
@@ -93,6 +118,7 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
         }
     }
 
+    /// handler for `tableView(_:canEditRowAt:)`
     open var canEditRowAtIndexPath: CanEditRowAtIndexPath {
         didSet {
             #if DEBUG
@@ -100,6 +126,8 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
             #endif
         }
     }
+
+    /// handler for `tableView(_:canMoveRowAt:)`
     open var canMoveRowAtIndexPath: CanMoveRowAtIndexPath {
         didSet {
             #if DEBUG
@@ -108,6 +136,7 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
         }
     }
 
+    /// handler for `sectionIndexTitles(for:)`
     open var sectionIndexTitles: SectionIndexTitles {
         didSet {
             #if DEBUG
@@ -115,6 +144,8 @@ open class DifferentiableTableViewDataSource<S: Differentiable> : NSObject, UITa
             #endif
         }
     }
+
+    /// handler for `tableView(_:sectionForSectionIndexTitle:at:)`
     open var sectionForSectionIndexTitle: SectionForSectionIndexTitle {
         didSet {
             #if DEBUG
