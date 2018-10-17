@@ -150,7 +150,16 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
         return self.indexTitles?(self)
     }
 
-    public func collectionView(_ collectionView: UICollectionView, observedEvent: Event<[S]>) {
+    override open func responds(to aSelector: Selector!) -> Bool {
+        if aSelector == #selector(UICollectionViewDataSource.collectionView(_:viewForSupplementaryElementOfKind:at:)) {
+            return self.viewForSupplementaryElementOfKind != nil
+        }
+        else {
+            return super.responds(to: aSelector)
+        }
+    }
+
+    open func collectionView(_ collectionView: UICollectionView, observedEvent: Event<[S]>) {
         Binder(self) { dataSource, newItems in
             #if DEBUG
             self.dataSourceBound = true
