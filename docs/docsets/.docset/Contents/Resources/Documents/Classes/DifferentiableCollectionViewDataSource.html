@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DifferentiableCollectionViewDataSource Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DifferentiableCollectionViewDataSource" class="dashAnchor"></a>
+    <a title="DifferentiableCollectionViewDataSource Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (51% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DifferentiableCollectionViewDataSource Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DifferentiableCollectionViewDataSource.html">DifferentiableCollectionViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DifferentiableSectionedCollecitonViewDataSource.html">DifferentiableSectionedCollecitonViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DifferentiableSectionedTableViewDataSource.html">DifferentiableSectionedTableViewDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DifferentiableTableViewDataSource.html">DifferentiableTableViewDataSource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DuplicationPolicy.html">DuplicationPolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DifferentiableDataSourceConfiguration.html">DifferentiableDataSourceConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RowAnimation.html">RowAnimation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DifferentiableCollectionViewDataSource</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">UICollectionViewDataSource</span><span class="p">,</span> <span class="kt">RxCollectionViewDataSourceType</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt">DifferentiableSection</span></code></pre>
+
+                </div>
+              </div>
+            <p>Reactive UICollectionViewDatasource with <code>Differentiable</code>s</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7RxCocoa0A28CollectionViewDataSourceTypeP7ElementQa"></a>
+                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7RxCocoa0A28CollectionViewDataSourceTypeP7ElementQa">Element</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="p">[</span><span class="kt">S</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13ConfigureCella"></a>
+                    <a name="//apple_ref/swift/Alias/ConfigureCell" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13ConfigureCella">ConfigureCell</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ConfigureCell</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC0F29ForSupplementaryElementOfKinda"></a>
+                    <a name="//apple_ref/swift/Alias/ViewForSupplementaryElementOfKind" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC0F29ForSupplementaryElementOfKinda">ViewForSupplementaryElementOfKind</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ViewForSupplementaryElementOfKind</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionReusableView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC21CanMoveRowAtIndexPatha"></a>
+                    <a name="//apple_ref/swift/Alias/CanMoveRowAtIndexPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC21CanMoveRowAtIndexPatha">CanMoveRowAtIndexPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CanMoveRowAtIndexPath</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11IndexTitlesa"></a>
+                    <a name="//apple_ref/swift/Alias/IndexTitles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11IndexTitlesa">IndexTitles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">IndexTitles</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC012IndexPathForI5Titlea"></a>
+                    <a name="//apple_ref/swift/Alias/IndexPathForIndexTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC012IndexPathForI5Titlea">IndexPathForIndexTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">IndexPathForIndexTitle</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13configurationAA0dgH13ConfigurationVyxGvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13configurationAA0dgH13ConfigurationVyxGvp">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>configuration for data source</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/DifferentiableDataSourceConfiguration.html">DifferentiableDataSourceConfiguration</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13configureCell33viewForSupplementaryElementOfKind21canMoveRowAtIndexPath11indexTitles0wvlU5Title13configurationACyxGSo012UICollectionfJ0CAJ_So012UICollectionF0C10Foundation0uV0Vxtc_So020UICollectionReusableF0CAJ_ANSSAQtcSgSbAJ_AQtcSaySSGSgAJcAqJ_SSSitcSgAA0dgH13ConfigurationVyxGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(configureCell:viewForSupplementaryElementOfKind:canMoveRowAtIndexPath:indexTitles:indexPathForIndexTitle:configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13configureCell33viewForSupplementaryElementOfKind21canMoveRowAtIndexPath11indexTitles0wvlU5Title13configurationACyxGSo012UICollectionfJ0CAJ_So012UICollectionF0C10Foundation0uV0Vxtc_So020UICollectionReusableF0CAJ_ANSSAQtcSgSbAJ_AQtcSaySSGSgAJcAqJ_SSSitcSgAA0dgH13ConfigurationVyxGtcfc">init(configureCell:viewForSupplementaryElementOfKind:canMoveRowAtIndexPath:indexTitles:indexPathForIndexTitle:configuration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializer for UICollectionViewDataSource with <code>Differentiable</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">configureCell</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13ConfigureCella">ConfigureCell</a></span><span class="p">,</span>
+    <span class="nv">viewForSupplementaryElementOfKind</span><span class="p">:</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC0F29ForSupplementaryElementOfKinda">ViewForSupplementaryElementOfKind</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">canMoveRowAtIndexPath</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC21CanMoveRowAtIndexPatha">CanMoveRowAtIndexPath</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">false</span> <span class="p">},</span>
+    <span class="nv">indexTitles</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11IndexTitlesa">IndexTitles</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">nil</span> <span class="p">},</span>
+    <span class="nv">indexPathForIndexTitle</span><span class="p">:</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC012IndexPathForI5Titlea">IndexPathForIndexTitle</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/DifferentiableDataSourceConfiguration.html">DifferentiableDataSourceConfiguration</a></span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt"><a href="../Structs/DifferentiableDataSourceConfiguration.html">DifferentiableDataSourceConfiguration</a></span><span class="o">.</span><span class="k">default</span>
+    <span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configureCell</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13cellForItemAtSo012UICollectionF4CellCSo0nF0C_10Foundation9IndexPathVtF">collectionView(_:cellForItemAt:)</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewForSupplementaryElementOfKind</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_33viewForSupplementaryElementOfKind2atSo020UICollectionReusableF0CSo0qF0C_SS10Foundation9IndexPathVtF">collectionView(_:viewForSupplementaryElementOfKind:at:)</a></code>, default value is <code>nil</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>canMoveRowAtIndexPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13canMoveItemAtSbSo012UICollectionF0C_10Foundation9IndexPathVtF">collectionView(_:canMoveItemAt:)</a></code>, default value is <code>{ _, _ in false }</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexTitles</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11indexTitles3forSaySSGSgSo012UICollectionF0C_tF">indexTitles(for:)</a></code>, default value is <code>{ _ in nil }</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indexPathForIndexTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>handler for <code>collectionView(_:indexPathForIndexTitle:at:)</code>, default value is <code>nil</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>configuration for data source, default value is <code><a href="../Structs/DifferentiableDataSourceConfiguration.html#/s:15RxDifferenceKit37DifferentiableDataSourceConfigurationV7defaultACyxGvpZ">DifferentiableDataSourceConfiguration.default</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC5itemsSayxGvp"></a>
+                    <a name="//apple_ref/swift/Property/items" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC5itemsSayxGvp">items</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>current items for data source</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">S</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceCyxSicip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceCyxSicip">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">S</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC8setItemsyySayxGF"></a>
+                    <a name="//apple_ref/swift/Method/setItems(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC8setItemsyySayxGF">setItems(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>update items for data source</p>
+
+<p>This method just update <em>data source</em>, do not update collectionView.
+If you need to update tableView, run <code>collectionView.reloadData()</code> or etc.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setItems</span><span class="p">(</span><span class="n">_</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">S</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>items</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>new items for data source</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13configureCellySo012UICollectionfJ0CACyxG_So0kF0C10Foundation9IndexPathVxtcvp"></a>
+                    <a name="//apple_ref/swift/Property/configureCell" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13configureCellySo012UICollectionfJ0CACyxG_So0kF0C10Foundation9IndexPathVxtcvp">configureCell</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13cellForItemAtSo012UICollectionF4CellCSo0nF0C_10Foundation9IndexPathVtF">collectionView(_:cellForItemAt:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">configureCell</span><span class="p">:</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC13ConfigureCella">ConfigureCell</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC33viewForSupplementaryElementOfKindSo020UICollectionReusableF0CACyxG_So0oF0CSS10Foundation9IndexPathVtcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/viewForSupplementaryElementOfKind" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC33viewForSupplementaryElementOfKindSo020UICollectionReusableF0CACyxG_So0oF0CSS10Foundation9IndexPathVtcSgvp">viewForSupplementaryElementOfKind</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_33viewForSupplementaryElementOfKind2atSo020UICollectionReusableF0CSo0qF0C_SS10Foundation9IndexPathVtF">collectionView(_:viewForSupplementaryElementOfKind:at:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">viewForSupplementaryElementOfKind</span><span class="p">:</span> <span class="p">((</span><span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionReusableView</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC21canMoveRowAtIndexPathySbACyxG_10Foundation0mN0Vtcvp"></a>
+                    <a name="//apple_ref/swift/Property/canMoveRowAtIndexPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC21canMoveRowAtIndexPathySbACyxG_10Foundation0mN0Vtcvp">canMoveRowAtIndexPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13canMoveItemAtSbSo012UICollectionF0C_10Foundation9IndexPathVtF">collectionView(_:canMoveItemAt:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">canMoveRowAtIndexPath</span><span class="p">:</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC21CanMoveRowAtIndexPatha">CanMoveRowAtIndexPath</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11indexTitlesySaySSGSgACyxGcvp"></a>
+                    <a name="//apple_ref/swift/Property/indexTitles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11indexTitlesySaySSGSgACyxGcvp">indexTitles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>handler for <code><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11indexTitles3forSaySSGSgSo012UICollectionF0C_tF">indexTitles(for:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">indexTitles</span><span class="p">:</span> <span class="kt"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11IndexTitlesa">IndexTitles</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC22indexPathForIndexTitle10Foundation0lJ0VACyxG_SSSitcSgvp"></a>
+                    <a name="//apple_ref/swift/Property/indexPathForIndexTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC22indexPathForIndexTitle10Foundation0lJ0VACyxG_SSSitcSgvp">indexPathForIndexTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>handler for <code>collectionView(_:indexPathForIndexTitle:at:)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">indexPathForIndexTitle</span><span class="p">:</span> <span class="p">((</span><span class="kt">DifferentiableCollectionViewDataSource</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/UICollectionViewDataSource"></a>
+                <a name="//apple_ref/swift/Section/UICollectionViewDataSource" class="dashAnchor"></a>
+                <a href="#/UICollectionViewDataSource">
+                  <h3 class="section-name">UICollectionViewDataSource</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC16numberOfSections2inSiSo012UICollectionF0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/numberOfSections(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC16numberOfSections2inSiSo012UICollectionF0C_tF">numberOfSections(in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">numberOfSections</span><span class="p">(</span><span class="k">in</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_22numberOfItemsInSectionSiSo012UICollectionF0C_SitF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:numberOfItemsInSection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_22numberOfItemsInSectionSiSo012UICollectionF0C_SitF">collectionView(_:numberOfItemsInSection:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">numberOfItemsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13cellForItemAtSo012UICollectionF4CellCSo0nF0C_10Foundation9IndexPathVtF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:cellForItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13cellForItemAtSo012UICollectionF4CellCSo0nF0C_10Foundation9IndexPathVtF">collectionView(_:cellForItemAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">cellForItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_33viewForSupplementaryElementOfKind2atSo020UICollectionReusableF0CSo0qF0C_SS10Foundation9IndexPathVtF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:viewForSupplementaryElementOfKind:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_33viewForSupplementaryElementOfKind2atSo020UICollectionReusableF0CSo0qF0C_SS10Foundation9IndexPathVtF">collectionView(_:viewForSupplementaryElementOfKind:at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n"><a href="../Classes/DifferentiableCollectionViewDataSource.html#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC33viewForSupplementaryElementOfKindSo020UICollectionReusableF0CACyxG_So0oF0CSS10Foundation9IndexPathVtcSgvp">viewForSupplementaryElementOfKind</a></span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">at</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionReusableView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13canMoveItemAtSbSo012UICollectionF0C_10Foundation9IndexPathVtF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:canMoveItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_13canMoveItemAtSbSo012UICollectionF0C_10Foundation9IndexPathVtF">collectionView(_:canMoveItemAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">canMoveItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_10moveItemAt2toySo012UICollectionF0C_10Foundation9IndexPathVAKtF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:moveItemAt:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC010collectionF0_10moveItemAt2toySo012UICollectionF0C_10Foundation9IndexPathVAKtF">collectionView(_:moveItemAt:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">moveItemAt</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">to</span> <span class="nv">destinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11indexTitles3forSaySSGSgSo012UICollectionF0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/indexTitles(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15RxDifferenceKit38DifferentiableCollectionViewDataSourceC11indexTitles3forSaySSGSgSo012UICollectionF0C_tF">indexTitles(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">indexTitles</span><span class="p">(</span><span class="k">for</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7RxCocoa0A28CollectionViewDataSourceTypeP010collectionD0_13observedEventySo012UICollectionD0C_0A5Swift0J0Oy7ElementQzGtF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:observedEvent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7RxCocoa0A28CollectionViewDataSourceTypeP010collectionD0_13observedEventySo012UICollectionD0C_0A5Swift0J0Oy7ElementQzGtF">collectionView(_:observedEvent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="nv">observedEvent</span><span class="p">:</span> <span class="kt">Event</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">S</span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
