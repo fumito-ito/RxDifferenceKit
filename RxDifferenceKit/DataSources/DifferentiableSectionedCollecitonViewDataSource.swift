@@ -176,8 +176,7 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
     override open func responds(to aSelector: Selector!) -> Bool {
         if aSelector == #selector(UICollectionViewDataSource.collectionView(_:viewForSupplementaryElementOfKind:at:)) {
             return self.viewForSupplementaryElementOfKind != nil
-        }
-        else {
+        } else {
             return super.responds(to: aSelector)
         }
     }
