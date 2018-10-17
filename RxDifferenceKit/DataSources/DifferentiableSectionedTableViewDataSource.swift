@@ -181,7 +181,7 @@ open class DifferentiableSectionedTableViewDataSource<S: DifferentiableSection> 
         return sectionForSectionIndexTitle(self, title, index)
     }
 
-    public func tableView(_ tableView: UITableView, observedEvent: RxSwift.Event<Element>) {
+    open func tableView(_ tableView: UITableView, observedEvent: RxSwift.Event<Element>) {
         Binder(self) { dataSource, newItems in
             #if DEBUG
             self.dataSourceBound = true

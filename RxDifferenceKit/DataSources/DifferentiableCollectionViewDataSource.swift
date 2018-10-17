@@ -141,7 +141,7 @@ open class DifferentiableCollectionViewDataSource<S: DifferentiableSection> : NS
         return self.indexTitles?(self)
     }
 
-    public func collectionView(_ collectionView: UICollectionView, observedEvent: Event<[S]>) {
+    open func collectionView(_ collectionView: UICollectionView, observedEvent: Event<[S]>) {
         Binder(self) { dataSource, newItems in
             #if DEBUG
             self.dataSourceBound = true

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct RowAnimation {
     public let insertRowAnimation: UITableView.RowAnimation
