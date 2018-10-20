@@ -1,0 +1,453 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/Configurations/DifferentiableDataSourceConfiguration.swift",
+      "line": 14,
+      "symbol": "DifferentiableDataSourceConfiguration.rowAnimation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/Configurations/DifferentiableDataSourceConfiguration.swift",
+      "line": 15,
+      "symbol": "DifferentiableDataSourceConfiguration.duplicationPolicy",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 20,
+      "symbol": "DifferentiableCollectionViewDataSource.ConfigureCell",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 21,
+      "symbol": "DifferentiableCollectionViewDataSource.ViewForSupplementaryElementOfKind",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 22,
+      "symbol": "DifferentiableCollectionViewDataSource.CanMoveRowAtIndexPath",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 23,
+      "symbol": "DifferentiableCollectionViewDataSource.IndexTitles",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 24,
+      "symbol": "DifferentiableCollectionViewDataSource.IndexPathForIndexTitle",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 73,
+      "symbol": "DifferentiableCollectionViewDataSource.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 134,
+      "symbol": "DifferentiableCollectionViewDataSource.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 138,
+      "symbol": "DifferentiableCollectionViewDataSource.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 144,
+      "symbol": "DifferentiableCollectionViewDataSource.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 150,
+      "symbol": "DifferentiableCollectionViewDataSource.collectionView(_:viewForSupplementaryElementOfKind:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 154,
+      "symbol": "DifferentiableCollectionViewDataSource.collectionView(_:canMoveItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 158,
+      "symbol": "DifferentiableCollectionViewDataSource.collectionView(_:moveItemAt:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableCollectionViewDataSource.swift",
+      "line": 163,
+      "symbol": "DifferentiableCollectionViewDataSource.indexTitles(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 20,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.ConfigureCell",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 21,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.ViewForSupplementaryElementOfKind",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 22,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.CanMoveRowAtIndexPath",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 23,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.IndexTitles",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 24,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.IndexPathForIndexTitle",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 73,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 134,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 138,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 144,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 150,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.collectionView(_:viewForSupplementaryElementOfKind:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 154,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.collectionView(_:canMoveItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 158,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.collectionView(_:moveItemAt:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedCollecitonViewDataSource.swift",
+      "line": 172,
+      "symbol": "DifferentiableSectionedCollecitonViewDataSource.indexTitles(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 20,
+      "symbol": "DifferentiableSectionedTableViewDataSource.ConfigureCell",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 21,
+      "symbol": "DifferentiableSectionedTableViewDataSource.TitleForHeaderInSection",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 22,
+      "symbol": "DifferentiableSectionedTableViewDataSource.TitleForFooterInSection",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 23,
+      "symbol": "DifferentiableSectionedTableViewDataSource.CanEditRowAtIndexPath",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 24,
+      "symbol": "DifferentiableSectionedTableViewDataSource.CanMoveRowAtIndexPath",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 25,
+      "symbol": "DifferentiableSectionedTableViewDataSource.SectionIndexTitles",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 26,
+      "symbol": "DifferentiableSectionedTableViewDataSource.SectionForSectionIndexTitle",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 81,
+      "symbol": "DifferentiableSectionedTableViewDataSource.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 160,
+      "symbol": "DifferentiableSectionedTableViewDataSource.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 164,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 170,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 176,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:titleForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 180,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:titleForFooterInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 184,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:canEditRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 188,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:canMoveRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 192,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:moveRowAt:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 206,
+      "symbol": "DifferentiableSectionedTableViewDataSource.sectionIndexTitles(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableSectionedTableViewDataSource.swift",
+      "line": 210,
+      "symbol": "DifferentiableSectionedTableViewDataSource.tableView(_:sectionForSectionIndexTitle:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 20,
+      "symbol": "DifferentiableTableViewDataSource.ConfigureCell",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 21,
+      "symbol": "DifferentiableTableViewDataSource.TitleForHeaderInSection",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 22,
+      "symbol": "DifferentiableTableViewDataSource.TitleForFooterInSection",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 23,
+      "symbol": "DifferentiableTableViewDataSource.CanEditRowAtIndexPath",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 24,
+      "symbol": "DifferentiableTableViewDataSource.CanMoveRowAtIndexPath",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 25,
+      "symbol": "DifferentiableTableViewDataSource.SectionIndexTitles",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 26,
+      "symbol": "DifferentiableTableViewDataSource.SectionForSectionIndexTitle",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 80,
+      "symbol": "DifferentiableTableViewDataSource.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 159,
+      "symbol": "DifferentiableTableViewDataSource.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 163,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 169,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 175,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:titleForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 179,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:titleForFooterInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 183,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:canEditRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 187,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:canMoveRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 191,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:moveRowAt:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 196,
+      "symbol": "DifferentiableTableViewDataSource.sectionIndexTitles(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit/RxDifferenceKit/DataSources/DifferentiableTableViewDataSource.swift",
+      "line": 200,
+      "symbol": "DifferentiableTableViewDataSource.tableView(_:sectionForSectionIndexTitle:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/fumitoito/Projects/com/github/fumito-ito/RxDifferenceKit"
+}

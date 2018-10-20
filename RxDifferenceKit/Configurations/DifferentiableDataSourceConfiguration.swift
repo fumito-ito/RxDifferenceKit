@@ -9,10 +9,12 @@
 import Foundation
 import DifferenceKit
 
+/// Configuration for data source
 public struct DifferentiableDataSourceConfiguration<T: Differentiable> {
     public let rowAnimation: RowAnimation
     public let duplicationPolicy: DuplicationPolicy<T>
 
+    /// default configuration, use `.automatic` animations and `duplicatable` policy
     public static var `default`: DifferentiableDataSourceConfiguration<T> {
         return DifferentiableDataSourceConfiguration<T>(rowAnimation: RowAnimation(), duplicationPolicy: .duplicatable)
     }
