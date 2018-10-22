@@ -7,7 +7,14 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import UIKit
 
 final class MenuViewModel {
-    
+    var menus: Observable<[Menu]>
+
+    init() {
+        self.menus = Observable.just(Menu.generateMenus())
+    }
 }

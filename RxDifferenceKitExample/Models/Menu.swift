@@ -22,4 +22,13 @@ struct Menu: Differentiable {
     func isContentEqual(to source: Menu) -> Bool {
         return source.title == self.title
     }
+
+    static func generateMenus() -> [Menu] {
+        return [
+            Menu(title: "Liner / TableView", segueReuseIdentifier: "linerTable"),
+            Menu(title: "Sectioned / TableView", segueReuseIdentifier: "sectionedTable"),
+            Menu(title: "Liner / CollectionView", segueReuseIdentifier: "linerCollection"),
+            Menu(title: "Sectioned / CollectionView", segueReuseIdentifier: "sectionedCollection")
+        ]
+    }
 }

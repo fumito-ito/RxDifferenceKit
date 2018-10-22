@@ -30,20 +30,43 @@ class ViewController: UIViewController {
         return source
     }()
 
+    let viewModel = MenuViewModel()
+
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.view.addSubview(self.tableView)
+
+        self.viewModel.menus
+            .asObservable()
+            .bind(to: self.tableView.rx.items(dataSource: self.dataSource))
+            .disposed(by: self.disposeBag)
     }
 
     private func configureCell(dataSource: DifferentiableTableViewDataSource<Menu>,
                                tableView: UITableView,
                                indexPath: IndexPath,
                                menu: Menu) -> UITableViewCell {
-        return UITableViewCell(frame: .zero)
+
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier) as? TableViewCell else {
+            return UITableViewCell(frame: .zero)
+        }
+
+        cell.textLabel?.text = menu.title
+        cell.segueReuseIdentifier = menu.segueReuseIdentifier
+
+        return cell
     }
 }
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell, let segueReuseIdentifier = cell.segueReuseIdentifier else {
+            return
+        }
+
+        self.performSegue(withIdentifier: segueReuseIdentifier, sender: nil)
     }
 }
