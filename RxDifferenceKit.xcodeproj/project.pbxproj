@@ -29,6 +29,7 @@
 		0AC0713A215DCF6600A13090 /* RxDifferenceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC0712C215DCF6500A13090 /* RxDifferenceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C54DEF6E2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DEF6D2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift */; };
 		C54DEF722164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54DEF712164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift */; };
+		C599982721819B4A00614DA4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599982621819B4A00614DA4 /* String+Extensions.swift */; };
 		C5A8E6F32174ADFD004534DC /* LinerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6F22174ADFD004534DC /* LinerTableViewController.swift */; };
 		C5A8E6F52174AE08004534DC /* SectionedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6F42174AE08004534DC /* SectionedTableViewController.swift */; };
 		C5A8E6F72174AE12004534DC /* LinerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E6F62174AE12004534DC /* LinerCollectionViewController.swift */; };
@@ -84,6 +85,7 @@
 		0AC07139215DCF6600A13090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C54DEF6D2164F44500D0DE68 /* DifferentiableTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableTableViewDataSource.swift; sourceTree = "<group>"; };
 		C54DEF712164FF1B00D0DE68 /* DifferentiableSectionedTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiableSectionedTableViewDataSource.swift; sourceTree = "<group>"; };
+		C599982621819B4A00614DA4 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C5A8E6F22174ADFD004534DC /* LinerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinerTableViewController.swift; sourceTree = "<group>"; };
 		C5A8E6F42174AE08004534DC /* SectionedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedTableViewController.swift; sourceTree = "<group>"; };
 		C5A8E6F62174AE12004534DC /* LinerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinerCollectionViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		C5A8E6F12174AD9F004534DC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C599982621819B4A00614DA4 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5A8E7022174AE84004534DC /* CollectionViewCell.swift in Sources */,
+				C599982721819B4A00614DA4 /* String+Extensions.swift in Sources */,
 				C5E2A0CE21742165008570B1 /* ViewController.swift in Sources */,
 				C5E2A0CC21742165008570B1 /* AppDelegate.swift in Sources */,
 				C5A8E6F52174AE08004534DC /* SectionedTableViewController.swift in Sources */,
