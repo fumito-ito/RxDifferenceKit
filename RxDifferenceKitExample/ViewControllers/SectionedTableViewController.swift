@@ -10,21 +10,15 @@ import UIKit
 
 class SectionedTableViewController: UIViewController {
 
+    lazy var tableView: UITableView = {
+        let view = UITableView(frame: self.view.frame)
+
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.addSubview(self.tableView)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
