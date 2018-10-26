@@ -89,7 +89,12 @@ open class DifferentiableSectionedTableViewDataSource<S: DifferentiableSection> 
     ///
     /// - Parameter items: new items for data source
     open func setItems(_ items: [S]) {
-        self._items = items
+        switch self.configuration.duplicationPolicy {
+        case .duplicatable:
+            self._items = items
+        case let .unique(handler):
+            self._items = handler(items)
+        }
     }
 
     /// handler for `tableView(_:cellForRowAt:)`
