@@ -22,11 +22,12 @@ public enum DuplicationPolicy<T: Differentiable> {
     /// Handler type to distinct duplicate data
     public typealias UniqueHandler = ([T]) -> [T]
 
-    /// Handler to distinct duplicate data by `NSOrderedSet`
-    public static var uniqueByOrderedSet: UniqueHandler {
+    /// Handler to distinct duplicate data
+    public static var uniqueHandler: UniqueHandler {
         return { original in
-            let set = NSOrderedSet(array: original)
-            return set.array as! [T]
+            var dictionary = [T.DifferenceIdentifier: Bool]()
+
+            return original.filter({ o in dictionary.updateValue(true, forKey: o.differenceIdentifier) == nil })
         }
     }
 }
