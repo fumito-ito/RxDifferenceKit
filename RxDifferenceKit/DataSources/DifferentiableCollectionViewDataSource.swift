@@ -13,7 +13,7 @@ import RxSwift
 import DifferenceKit
 
 /// Reactive UICollectionViewDatasource with `Differentiable`s
-open class DifferentiableCollectionViewDataSource<S: DifferentiableSection> : NSObject, UICollectionViewDataSource, RxCollectionViewDataSourceType {
+open class DifferentiableCollectionViewDataSource<S: Differentiable> : NSObject, UICollectionViewDataSource, RxCollectionViewDataSourceType {
 
     public typealias Element = [S]
 
@@ -81,7 +81,12 @@ open class DifferentiableCollectionViewDataSource<S: DifferentiableSection> : NS
     ///
     /// - Parameter items: new items for data source
     open func setItems(_ items: [S]) {
-        self._items = items
+        switch self.configuration.duplicationPolicy {
+        case .duplicatable:
+            self._items = items
+        case let .unique(handler):
+            self._items = handler(items)
+        }
     }
 
     /// handler for `collectionView(_:cellForItemAt:)`
@@ -162,6 +167,14 @@ open class DifferentiableCollectionViewDataSource<S: DifferentiableSection> : NS
 
     open func indexTitles(for collectionView: UICollectionView) -> [String]? {
         return self.indexTitles(self)
+    }
+
+    override open func responds(to aSelector: Selector!) -> Bool {
+        if aSelector == #selector(UICollectionViewDataSource.collectionView(_:viewForSupplementaryElementOfKind:at:)) {
+            return self.viewForSupplementaryElementOfKind != nil
+        } else {
+            return super.responds(to: aSelector)
+        }
     }
 
     open func collectionView(_ collectionView: UICollectionView, observedEvent: Event<[S]>) {

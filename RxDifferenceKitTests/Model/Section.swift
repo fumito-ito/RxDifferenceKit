@@ -12,6 +12,11 @@ import DifferenceKit
 struct Section {
     var label: String
     var elements: [Liner]
+
+    init(label: String, elements: [Liner]) {
+        self.label = label
+        self.elements = elements
+    }
 }
 
 extension Section: DifferentiableSection {

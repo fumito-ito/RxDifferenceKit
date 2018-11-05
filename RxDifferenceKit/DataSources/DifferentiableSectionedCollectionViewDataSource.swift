@@ -13,15 +13,15 @@ import RxSwift
 import DifferenceKit
 
 /// Reactive UICollectionViewDatasource with `DifferentiableSection`s
-open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSection> : NSObject, UICollectionViewDataSource, RxCollectionViewDataSourceType where S.Collection.Index == Int {
+open class DifferentiableSectionedCollectionViewDataSource<S: DifferentiableSection> : NSObject, UICollectionViewDataSource, RxCollectionViewDataSourceType where S.Collection.Index == Int {
 
     public typealias Element = [S]
 
-    public typealias ConfigureCell = (DifferentiableSectionedCollecitonViewDataSource<S>, UICollectionView, IndexPath, S.Collection.Element) -> UICollectionViewCell
-    public typealias ViewForSupplementaryElementOfKind = (DifferentiableSectionedCollecitonViewDataSource<S>, UICollectionView, String, IndexPath) -> UICollectionReusableView
-    public typealias CanMoveRowAtIndexPath = (DifferentiableSectionedCollecitonViewDataSource<S>, IndexPath) -> Bool
-    public typealias IndexTitles = (DifferentiableSectionedCollecitonViewDataSource<S>) -> [String]?
-    public typealias IndexPathForIndexTitle = (DifferentiableSectionedCollecitonViewDataSource<S>, _ title: String, _ index: Int) -> IndexPath
+    public typealias ConfigureCell = (DifferentiableSectionedCollectionViewDataSource<S>, UICollectionView, IndexPath, S.Collection.Element) -> UICollectionViewCell
+    public typealias ViewForSupplementaryElementOfKind = (DifferentiableSectionedCollectionViewDataSource<S>, UICollectionView, String, IndexPath) -> UICollectionReusableView
+    public typealias CanMoveRowAtIndexPath = (DifferentiableSectionedCollectionViewDataSource<S>, IndexPath) -> Bool
+    public typealias IndexTitles = (DifferentiableSectionedCollectionViewDataSource<S>) -> [String]?
+    public typealias IndexPathForIndexTitle = (DifferentiableSectionedCollectionViewDataSource<S>, _ title: String, _ index: Int) -> IndexPath
 
     /// configuration for data source
     public let configuration: DifferentiableDataSourceConfiguration<S>
@@ -81,7 +81,12 @@ open class DifferentiableSectionedCollecitonViewDataSource<S: DifferentiableSect
     ///
     /// - Parameter items: new items for data source
     open func setItems(_ items: [S]) {
-        self._items = items
+        switch self.configuration.duplicationPolicy {
+        case .duplicatable:
+            self._items = items
+        case let .unique(handler):
+            self._items = handler(items)
+        }
     }
 
     /// handler for `collectionView(_:cellForItemAt:)`

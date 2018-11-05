@@ -1,5 +1,5 @@
 //
-//  DifferentiableCollectionViewDataSourceTests.swift
+//  DifferentiableSectionedCollecitonViewDataSourceTests.swift
 //  RxDifferenceKitTests
 //
 //  Created by Fumito Ito on 2018/10/17.
@@ -7,52 +7,76 @@
 //
 
 import XCTest
-import DifferenceKit
 
-class DifferentiableCollectionViewDataSourceTests: XCTestCase {
+class DifferentiableSectionedCollectionViewDataSourceTests: XCTestCase {
+    var initialSections: [Section] = []
+    var secondarySections: [Section] = []
 
     override func setUp() {
+        let initialLiners = (0...5).map({ number in Liner.init(label: "\(number)") })
+        let secondaryLiners = (0...5).map({ number in Liner.init(label: "\(number)") }) + (0...5).map({ number in Liner.init(label: "\(number)") })
+
+        self.initialSections = [Section(label: "0", elements: initialLiners), Section(label: "1", elements: secondaryLiners)]
+        self.secondarySections = [Section(label: "0", elements: initialLiners), Section(label: "0", elements: initialLiners), Section(label: "1", elements: secondaryLiners)]
     }
 
     override func tearDown() {
     }
 }
 
-extension DifferentiableCollectionViewDataSourceTests {
-    func testCollectionViewDataSource_duplicatableData() {
-        let dataSource = DifferentiableCollectionViewDataSource<Liner>(configureCell: { _, _, _, _ in UICollectionViewCell() })
+extension DifferentiableSectionedCollectionViewDataSourceTests {
+    func testSectionedTableViewDataSource_duplicatableData() {
+        let dataSource = DifferentiableSectionedCollectionViewDataSource<Section>(configureCell: { _, _, _, _ in UICollectionViewCell() })
 
-        let initialLiners = (0...5).map({ number in Liner.init(label: "\(number)") })
-        let secondaryLiners = (0...5).map({ number in Liner.init(label: "\(number)") }) + (0...5).map({ number in Liner.init(label: "\(number)") })
+        dataSource.setItems(self.initialSections)
 
-        dataSource.setItems(initialLiners)
-        XCTAssertEqual(dataSource.items.count, initialLiners.count)
-        XCTAssert(dataSource.items[0].isContentEqual(to: initialLiners[0]), "\(dataSource.items[0]) and \(initialLiners[0]) do not have content equality.")
+        XCTAssertEqual(dataSource.items.count, self.initialSections.count)
+        XCTAssertEqual(dataSource.items[0].elements.count, self.initialSections[0].elements.count)
 
-        dataSource.setItems(secondaryLiners)
-        XCTAssertEqual(dataSource.items.count, secondaryLiners.count)
-        XCTAssert(dataSource.items[0].isContentEqual(to: secondaryLiners[0]), "\(dataSource.items[0]) and \(secondaryLiners[0]) do not have content equality.")
+        XCTAssert(dataSource.items[0].isContentEqual(to: self.initialSections[0]),
+                  "\(dataSource.items[0]) and \(self.initialSections[0]) do not have content equality.")
+        XCTAssert(dataSource.items[0].elements[0].isContentEqual(to: self.initialSections[0].elements[0]),
+                  "\(dataSource.items[0].elements[0]) and \(self.initialSections[0].elements[0]) do not have content equality.")
+
+        dataSource.setItems(self.secondarySections)
+
+        XCTAssertEqual(dataSource.items.count, self.secondarySections.count)
+        XCTAssertEqual(dataSource.items[0].elements.count, self.secondarySections[0].elements.count)
+
+        XCTAssert(dataSource.items[0].isContentEqual(to: self.secondarySections[0]),
+                  "\(dataSource.items[0]) and \(self.secondarySections[0]) do not have content equality.")
+        XCTAssert(dataSource.items[0].elements[0].isContentEqual(to: self.secondarySections[0].elements[0]),
+                  "\(dataSource.items[0].elements[0]) and \(self.secondarySections[0].elements[0]) do not have content equality.")
     }
 
-    func testCollectionViewDataSource_uniqueData() {
-        let configuration = DifferentiableDataSourceConfiguration<Liner>.init(rowAnimation: RowAnimation(), duplicationPolicy: .unique(handler: DuplicationPolicy.uniqueHandler))
-        let dataSource = DifferentiableCollectionViewDataSource<Liner>(configureCell: { _, _, _, _ in UICollectionViewCell() }, configuration: configuration)
+    func testSectionedTableViewDataSource_uniqueData() {
+        let configuration = DifferentiableDataSourceConfiguration<Section>.init(rowAnimation: RowAnimation(), duplicationPolicy: .unique(handler: DuplicationPolicy.uniqueHandler))
+        let dataSource = DifferentiableSectionedCollectionViewDataSource<Section>(configureCell: { _, _, _, _ in UICollectionViewCell() }, configuration: configuration)
 
-        let initialLiners = (0...5).map({ number in Liner.init(label: "\(number)") })
-        let secondaryLiners = (0...5).map({ number in Liner.init(label: "\(number)") }) + (0...5).map({ number in Liner.init(label: "\(number)") })
+        dataSource.setItems(self.initialSections)
 
-        dataSource.setItems(initialLiners)
-        XCTAssertEqual(dataSource.items.count, initialLiners.count)
-        XCTAssert(dataSource.items[0].isContentEqual(to: initialLiners[0]), "\(dataSource.items[0]) and \(initialLiners[0]) do not have content equality.")
+        XCTAssertEqual(dataSource.items.count, self.initialSections.count)
+        XCTAssertEqual(dataSource.items[0].elements.count, self.initialSections[0].elements.count)
 
-        dataSource.setItems(secondaryLiners)
-        XCTAssertEqual(dataSource.items.count, secondaryLiners.count / 2)
-        XCTAssert(dataSource.items[0].isContentEqual(to: secondaryLiners[0]), "\(dataSource.items[0]) and \(secondaryLiners[0]) do not have content equality.")
+        XCTAssert(dataSource.items[0].isContentEqual(to: self.initialSections[0]),
+                  "\(dataSource.items[0]) and \(self.initialSections[0]) do not have content equality.")
+        XCTAssert(dataSource.items[0].elements[0].isContentEqual(to: self.initialSections[0].elements[0]),
+                  "\(dataSource.items[0].elements[0]) and \(self.initialSections[0].elements[0]) do not have content equality.")
+
+        dataSource.setItems(self.secondarySections)
+
+        XCTAssertEqual(dataSource.items.count, self.secondarySections.count - 1)
+        XCTAssertEqual(dataSource.items[0].elements.count, self.secondarySections[0].elements.count)
+
+        XCTAssert(dataSource.items[0].isContentEqual(to: self.secondarySections[0]),
+                  "\(dataSource.items[0]) and \(self.secondarySections[0]) do not have content equality.")
+        XCTAssert(dataSource.items[0].elements[0].isContentEqual(to: self.secondarySections[0].elements[0]),
+                  "\(dataSource.items[0].elements[0]) and \(self.secondarySections[0].elements[0]) do not have content equality.")
     }
 
     func testCollectionViewSectionedReloadDataSource_optionalConfigureSupplementaryView() {
 
-        let dataSource = DifferentiableCollectionViewDataSource<Liner>(configureCell: { _, _, _, _  in UICollectionViewCell() })
+        let dataSource = DifferentiableSectionedCollectionViewDataSource<Section>(configureCell: { _, _, _, _  in UICollectionViewCell() })
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 
@@ -71,7 +95,7 @@ extension DifferentiableCollectionViewDataSourceTests {
     }
 
     func testCollectionViewSectionedDataSource_optionalConfigureSupplementaryView() {
-        let dataSource = DifferentiableCollectionViewDataSource<Liner>(configureCell: { _, _, _, _  in UICollectionViewCell() })
+        let dataSource = DifferentiableSectionedCollectionViewDataSource<Section>(configureCell: { _, _, _, _  in UICollectionViewCell() })
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 
@@ -91,10 +115,10 @@ extension DifferentiableCollectionViewDataSourceTests {
 }
 
 // configureSupplementaryView passed through init
-extension DifferentiableCollectionViewDataSourceTests {
+extension DifferentiableSectionedCollectionViewDataSourceTests {
     func testCollectionViewSectionedAnimatedDataSource_optionalConfigureSupplementaryView_initializer() {
         let sentinel = UICollectionReusableView()
-        let dataSource = DifferentiableCollectionViewDataSource<Liner>(
+        let dataSource = DifferentiableSectionedCollectionViewDataSource<Section>(
             configureCell: { _, _, _, _  in UICollectionViewCell() },
             viewForSupplementaryElementOfKind: { _, _, _, _ in return sentinel }
         )
@@ -112,7 +136,7 @@ extension DifferentiableCollectionViewDataSourceTests {
 
     func testCollectionViewSectionedReloadDataSource_optionalConfigureSupplementaryView_initializer() {
         let sentinel = UICollectionReusableView()
-        let dataSource = DifferentiableCollectionViewDataSource<Liner>(
+        let dataSource = DifferentiableSectionedCollectionViewDataSource<Section>(
             configureCell: { _, _, _, _  in UICollectionViewCell() },
             viewForSupplementaryElementOfKind: { _, _, _, _ in return sentinel }
         )
@@ -130,7 +154,7 @@ extension DifferentiableCollectionViewDataSourceTests {
 
     func testCollectionViewSectionedDataSource_optionalConfigureSupplementaryView_initializer() {
         let sentinel = UICollectionReusableView()
-        let dataSource = DifferentiableCollectionViewDataSource<Liner>(
+        let dataSource = DifferentiableSectionedCollectionViewDataSource<Section>(
             configureCell: { _, _, _, _  in UICollectionViewCell() },
             viewForSupplementaryElementOfKind: { _, _, _, _ in return sentinel }
         )
