@@ -1,6 +1,6 @@
 # RxDifferenceKit
 
-[![Build Status](https://app.bitrise.io/app/1511a6c74d6bf849/status.svg?token=r91mh4rlBi43y4k0lNdn7w&branch=master)](https://app.bitrise.io/app/1511a6c74d6bf849)
+[![Build Status](https://app.bitrise.io/app/1511a6c74d6bf849/status.svg?token=r91mh4rlBi43y4k0lNdn7w)](https://app.bitrise.io/app/1511a6c74d6bf849)
 
 UITableView and UICollectionView datasources for RxSwift with DifferenceKit
 
